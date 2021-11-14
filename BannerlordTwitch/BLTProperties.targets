@@ -54,7 +54,7 @@
         <Optimize>false</Optimize>
         <DefineConstants>$(DefineConstants);DEBUG;TRACE;e161</DefineConstants>
         <BANNERLORD_GAME_DIR>$(BANNERLORD_GAME_DIR_1_6_1)</BANNERLORD_GAME_DIR>
-        <BANNERLORD_GAME_DIR Condition=" '$(BANNERLORD_GAME_DIR)' == '' ">C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</BANNERLORD_GAME_DIR>
+        <BANNERLORD_GAME_DIR Condition=" '$(BANNERLORD_GAME_DIR)' == '' ">C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord 1.6.1</BANNERLORD_GAME_DIR>
         <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
         <XamlDebuggingInformation>True</XamlDebuggingInformation>
     </PropertyGroup>
@@ -62,6 +62,21 @@
         <Optimize>true</Optimize>
         <DefineConstants>$(DefineConstants);TRACE;e161</DefineConstants>
         <BANNERLORD_GAME_DIR>$(BANNERLORD_GAME_DIR_1_6_1)</BANNERLORD_GAME_DIR>
+        <BANNERLORD_GAME_DIR Condition=" '$(BANNERLORD_GAME_DIR)' == '' ">C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord 1.6.1</BANNERLORD_GAME_DIR>
+        <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug 1.6.4|AnyCPU' ">
+        <Optimize>false</Optimize>
+        <DefineConstants>$(DefineConstants);DEBUG;TRACE;e164</DefineConstants>
+        <BANNERLORD_GAME_DIR>$(BANNERLORD_GAME_DIR_1_6_4)</BANNERLORD_GAME_DIR>
+        <BANNERLORD_GAME_DIR Condition=" '$(BANNERLORD_GAME_DIR)' == '' ">C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</BANNERLORD_GAME_DIR>
+        <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+        <XamlDebuggingInformation>True</XamlDebuggingInformation>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release 1.6.4|AnyCPU' ">
+        <Optimize>true</Optimize>
+        <DefineConstants>$(DefineConstants);TRACE;e164</DefineConstants>
+        <BANNERLORD_GAME_DIR>$(BANNERLORD_GAME_DIR_1_6_4)</BANNERLORD_GAME_DIR>
         <BANNERLORD_GAME_DIR Condition=" '$(BANNERLORD_GAME_DIR)' == '' ">C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</BANNERLORD_GAME_DIR>
         <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     </PropertyGroup>

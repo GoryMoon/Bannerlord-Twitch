@@ -126,14 +126,14 @@ namespace BLTAdoptAHero
             {
                 if (lastTickT == 0)
                 {
-                    lastTickT = MBCommon.GetTime(MBCommon.TimeType.Application);
+                    lastTickT = MBCommon.GetApplicationTime();
                     return;
                 }
 
                 const float TickTime = 0.25f;
-                if (MBCommon.GetTime(MBCommon.TimeType.Application) - lastTickT > TickTime)
+                if (MBCommon.GetApplicationTime() - lastTickT > TickTime)
                 {
-                    lastTickT = MBCommon.GetTime(MBCommon.TimeType.Application);
+                    lastTickT = MBCommon.GetApplicationTime();
 
                     foreach (var h in activeHeroes)
                     {

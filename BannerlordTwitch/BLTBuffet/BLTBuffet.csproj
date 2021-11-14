@@ -26,10 +26,6 @@
         <NoWarn>MSB3246;MSB3247;MSB3277</NoWarn>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="0Harmony, Version=2.0.4.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\packages\Lib.Harmony.2.0.4\lib\net48\0Harmony.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
         <Reference Include="$(BANNERLORD_GAME_DIR)\bin\Win64_Shipping_Client\TaleWorlds.*.dll">
             <HintPath>%(Identity)</HintPath>
             <Private>False</Private>

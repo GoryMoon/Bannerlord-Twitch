@@ -15,7 +15,7 @@ namespace BLTBuffet
             public readonly Agent agent;
             public readonly Config config;
 
-            public float started = MBCommon.GetTime(MBCommon.TimeType.Mission);
+            public float started = MBCommon.GetTotalMissionTime();
             public class PfxState
             {
                 public List<GameEntityComponent> weaponEffects;
@@ -86,7 +86,7 @@ namespace BLTBuffet
             public bool CheckRemove()
             {
                 if (config.Duration.HasValue 
-                    && MBCommon.GetTime(MBCommon.TimeType.Mission) > config.Duration.Value + started)
+                    && MBCommon.GetTotalMissionTime() > config.Duration.Value + started)
                 {
                     Log.LogFeedEvent($"{config.Name} expired on {agent.Name}!");
                     if (!string.IsNullOrEmpty(config.DeactivateParticleEffect))

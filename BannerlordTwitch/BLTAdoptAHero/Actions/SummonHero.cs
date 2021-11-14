@@ -611,11 +611,15 @@ namespace BLTAdoptAHero
                         formationTroopCount: totalTroopsCount,
                         formationTroopIndex: formationTroopIdx++,
                         isAlarmed: true,
-                        wieldInitialWeapons: true);
+                        wieldInitialWeapons: true,
+                        forceDismounted: false,
+                        initialPosition: null,
+                        initialDirection: null,
+                        specialActionSet: null);
 
                     existingHero.State = AgentState.Active;
                     existingHero.TimesSummoned++;
-                    existingHero.SummonTime = MBCommon.GetTime(MBCommon.TimeType.Mission);
+                    existingHero.SummonTime = MBCommon.GetTotalMissionTime();
 
                     // if (settings.OnPlayerSide && existingHero.Formation == FormationClass.Bodyguard)
                     // {
@@ -655,7 +659,11 @@ namespace BLTAdoptAHero
                                 formationTroopCount: totalTroopsCount,
                                 formationTroopIndex: formationTroopIdx++,
                                 isAlarmed: true,
-                                wieldInitialWeapons: true);
+                                wieldInitialWeapons: true,
+                                forceDismounted: false,
+                                initialPosition: null,
+                                initialDirection: null,
+                                specialActionSet: null);
 
                             existingHero.Retinue.Add(new()
                             {

@@ -148,7 +148,10 @@ namespace BLTAdoptAHero.Actions.Util
             var itemsOfCorrectType = new List<ItemObject>();
             do
             {
-                var crafting = new Crafting(validTemplates.SelectRandom(), hero.Culture);
+                var template = validTemplates.SelectRandom();
+                var name = new TextObject("{=uZhHh7pm}Crafted {CURR_TEMPLATE_NAME}");
+                name.SetTextVariable("CURR_TEMPLATE_NAME", template.TemplateName);
+                var crafting = new Crafting(template, hero.Culture, name);
                 crafting.Init();
                 crafting.Randomize();
 
